@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the latest haircut trends and styles">
+    <meta name="theme-color" content="#5e35b1">
+    <title>HairStyle Gallery</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">HairStyle Gallery</h1>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search haircuts..." class="search-input">
+                <button id="searchBtn" class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filter-container">
+                <select id="hairLengthFilter" class="filter-select">
+                    <option value="all">All Lengths</option>
+                    <option value="short">Short</option>
+                    <option value="medium">Medium</option>
+                    <option value="long">Long</option>
+                </select>
+                <select id="genderFilter" class="filter-select">
+                    <option value="all">All Genders</option>
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                    <option value="unisex">Unisex</option>
+                </select>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="haircutGrid" class="haircut-grid">
+                <!-- Haircut cards will be dynamically inserted here -->
+            </div>
+        </main>
+
+        <div id="toast" class="toast"></div>
+
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>© <span id="currentYear"></span> HairStyle Gallery</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="Share on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <button id="installBtn" class="install-btn">Install App</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Haircut Detail Modal -->
+    <div id="haircutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="" class="modal-image">
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-meta">
+                        <span id="modalLength" class="meta-tag"></span>
+                        <span id="modalGender" class="meta-tag"></span>
+                        <span id="modalDifficulty" class="meta-tag"></span>
+                    </div>
+                    <div class="action-buttons">
+                        <button id="likeBtn" class="action-btn like-btn">
+                            <i class="far fa-heart"></i> <span id="likeCount">0</span>
+                        </button>
+                        <button id="shareBtn" class="action-btn share-btn">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                        <button id="saveBtn" class="action-btn save-btn">
+                            <i class="far fa-bookmark"></i> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
