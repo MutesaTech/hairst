@@ -73,7 +73,17 @@ const haircuts = [
     {
         id: 8,
         name: "Man Bun",
-        image: "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+        image: " image-15.png",
+        description: "Long hair tied up in a bun.",
+        length: "long",
+        gender: "men",
+        difficulty: "easy",
+        likes: 92
+    },
+     {
+        id: 8,
+        name: "Man Bun",
+        image: " image-15.png",
         description: "Long hair tied up in a bun.",
         length: "long",
         gender: "men",
